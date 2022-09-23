@@ -14,11 +14,11 @@ pipeline {
         cron '@midnight'
     }
     stages {
-        stage('Make executable') {
-            steps {
-                sh('sudo chmod +x .fibonacci.sh')
-            }
-        }
+ #       stage('Make executable') {
+ #           steps {
+ #               sh('sudo chmod +x .fibonacci.sh')
+  #          }
+  #      }
         stage('Relative path') {
             steps {
                 sh(".fibonacci.sh ${env.NUMBER}")
